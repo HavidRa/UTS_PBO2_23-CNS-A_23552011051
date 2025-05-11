@@ -92,5 +92,5 @@ public abstract class TenagaMedis {
 ## Demo Proyek
 <ul>
   <li>Github: <a href="https://github.com/HavidRa/UTS_PBO2_23-CNS-A_23552011051">Github</a></li>
-  <li>Gdrive: <a href="null">Gdrive</a></li>
+  <li>Gdrive: <a href="https://drive.google.com/file/d/1ttexnFqMTjY4F_sYIVIsQuhny1k3Prcp/view?usp=drive_link">Gdrive</a></li>
 </ul>
