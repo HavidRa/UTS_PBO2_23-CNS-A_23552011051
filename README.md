@@ -15,7 +15,7 @@
 <p>Sistem Informasi Apotek dengan Implementasi OOP dan Database MySQL</p>
 
 ## Penjelasan Studi Kasus
-<p>Sistem Informasi Apotek ini adalah aplikasi yang dirancang untuk mengelola transaksi pembelian obat di apotek. Aplikasi ini mendukung dua jenis transaksi: pembelian langsung dan pembelian dengan resep. Sistem ini mengimplementasikan konsep Object-Oriented Programming (OOP) dan menggunakan database MySQL untuk penyimpanan data. Fitur utama meliputi manajemen data pasien, obat, resep, dan transaksi, serta verifikasi oleh tenaga medis (dokter dan apoteker).</p>
+<p>Sistem Informasi Apotek ini adalah aplikasi yang dirancang untuk mengelola transaksi pembelian obat di apotek. Aplikasi ini mendukung dua jenis transaksi: pembelian langsung dan pembelian dengan resep. Setiap transaksi harus diverifikasi oleh tenaga medis yang berwenang - pembelian langsung diverifikasi oleh apoteker, sedangkan pembelian dengan resep diverifikasi oleh dokter dan apoteker. Sistem ini mengimplementasikan konsep Object-Oriented Programming (OOP) dan menggunakan database MySQL untuk penyimpanan data. Fitur utama meliputi manajemen data pasien, obat, resep, dan transaksi, serta verifikasi oleh tenaga medis (dokter dan apoteker).</p>
 
 ## Penjelasan 4 Pilar OOP dalam Studi Kasus
 
@@ -57,17 +57,24 @@ public class Pasien {
 ```
 
 ### 3. Polymorphism
-<p>Polymorphism diimplementasikan melalui method verifikasi() yang memiliki perilaku berbeda di class Dokter dan Apoteker. Method ini dipanggil melalui interface TenagaMedis, memungkinkan perilaku yang berbeda tergantung tipe objek. Contoh implementasi:</p>
+<p>Polymorphism diimplementasikan melalui method verifikasi() yang memiliki perilaku berbeda di class Dokter dan Apoteker. Method ini dipanggil melalui interface TenagaMedis, memungkinkan perilaku yang berbeda tergantung tipe objek. Dalam sistem ini, verifikasi dilakukan pada dua jenis transaksi:</p>
 
+<p>1. Pembelian Langsung: Diverifikasi oleh Apoteker</p>
 ```java
-// Di Dokter
-public void verifikasi() {
-    System.out.println("Dokter " + nama + " memverifikasi resep...");
-}
+// Di pembelianLangsung()
+Apoteker apoteker = new Apoteker("A001", "Budi");
+apoteker.verifikasi();
+```
 
-// Di Apoteker
-public void verifikasi() {
-    System.out.println("Apoteker " + nama + " memverifikasi obat...");
+<p>2. Pembelian dengan Resep: Diverifikasi oleh Dokter dan Apoteker</p>
+```java
+// Di pembelianResep()
+List<TenagaMedis> petugas = new ArrayList<>();
+petugas.add(dokter);
+petugas.add(new Apoteker("A001", "Anissa"));
+
+for (TenagaMedis t : petugas) {
+    t.verifikasi();
 }
 ```
 
