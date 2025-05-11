@@ -63,7 +63,7 @@ public class Pasien {
 
 ```java
 // Di pembelianLangsung()
-Apoteker apoteker = new Apoteker("A001", "Budi");
+Apoteker apoteker = new Apoteker("A001", "Rendi");
 apoteker.verifikasi();
 ```
 
@@ -73,7 +73,7 @@ apoteker.verifikasi();
 // Di pembelianResep()
 List<TenagaMedis> petugas = new ArrayList<>();
 petugas.add(dokter);
-petugas.add(new Apoteker("A001", "Anissa"));
+petugas.add(new Apoteker("A001", "Syifa"));
 
 for (TenagaMedis t : petugas) {
     t.verifikasi();
