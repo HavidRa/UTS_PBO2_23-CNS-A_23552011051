@@ -91,6 +91,6 @@ public abstract class TenagaMedis {
 
 ## Demo Proyek
 <ul>
-  <li>Github: <a href="https://github.com/yourusername/ApotekOOP">Github</a></li>
+  <li>Github: <a href="https://github.com/HavidRa/UTS_PBO2_23-CNS-A_23552011051">Github</a></li>
   <li>Gdrive: <a href="null">Gdrive</a></li>
 </ul>
