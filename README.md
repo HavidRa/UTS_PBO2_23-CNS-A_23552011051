@@ -7,7 +7,7 @@
 ## Profil
 <ul>
   <li>Nama: Havid Restu Afyantara</li>
-  <li>NIM: 20220801189</li>
+  <li>NIM: 23552011051</li>
   <li>Studi Kasus: Kasir Apotek</li>
 </ul>
 
