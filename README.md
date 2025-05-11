@@ -60,6 +60,7 @@ public class Pasien {
 <p>Polymorphism diimplementasikan melalui method verifikasi() yang memiliki perilaku berbeda di class Dokter dan Apoteker. Method ini dipanggil melalui interface TenagaMedis, memungkinkan perilaku yang berbeda tergantung tipe objek. Dalam sistem ini, verifikasi dilakukan pada dua jenis transaksi:</p>
 
 <p>1. Pembelian Langsung: Diverifikasi oleh Apoteker</p>
+
 ```java
 // Di pembelianLangsung()
 Apoteker apoteker = new Apoteker("A001", "Budi");
@@ -67,6 +68,7 @@ apoteker.verifikasi();
 ```
 
 <p>2. Pembelian dengan Resep: Diverifikasi oleh Dokter dan Apoteker</p>
+
 ```java
 // Di pembelianResep()
 List<TenagaMedis> petugas = new ArrayList<>();
